@@ -143,7 +143,7 @@ export default function Hero() {
                     {/* <InkBlot rotation={45} scale={1.2} position={{ top: '80%', left: '80%' }} opacity={0.3} /> */}
 
                     {/* Cute annotation */}
-                    <motion.div
+                    {/* <motion.div
                         style={{
                             position: 'absolute',
                             right: '-100px',
@@ -158,7 +158,7 @@ export default function Hero() {
                         transition={{ delay: 4.5 }}
                     >
                         this is me! ✨
-                    </motion.div>
+                    </motion.div> */}
                 </motion.div>
 
                 {/* Name: Inky Bleeding Effect */}
