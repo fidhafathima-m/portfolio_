@@ -73,7 +73,7 @@ export default function Education() {
                             </div>
                             <h3 className="diploma-degree" style={{ filter: 'url(#inkBleed)' }}>Bachelor of Computer Applications</h3>
                             <p className="diploma-details">
-                                <strong>University of Calicut</strong> | 2021 — 2024
+                                <strong>University of Kannur</strong> | 2021 — 2024
                             </p>
                         </motion.div>
                     </div>
