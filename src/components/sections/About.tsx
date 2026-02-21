@@ -77,7 +77,7 @@ export default function About() {
                         custom={3}
                         variants={fadeUp}
                     >
-                        Holding a Bachelor of Computer Applications from Calicut University, she has honed
+                        Holding a Bachelor of Computer Applications from Kannur University, she has honed
                         her skills through building full-stack platforms like <strong>LocalFix</strong>, a
                         service marketplace with real-time features, and <strong>Art Mart</strong>, an
                         e-commerce platform for art and craft supplies.
@@ -114,7 +114,7 @@ export default function About() {
                         </div>
                         <div className="marginalia-item">
                             <span className="marginalia-icon">📍</span>
-                            <span>Malappuram, Kerala, India</span>
+                            <span>Kannur, Kerala, India</span>
                         </div>
                         {/* Cute sticky note feel */}
                         <motion.div

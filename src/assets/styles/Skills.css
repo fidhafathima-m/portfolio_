@@ -8,10 +8,12 @@
     gap: 1.5rem;
     max-width: 900px;
     margin: 0 auto;
+    margin-top: 10px
 }
 
 .skill-card {
     transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+    margin-top: 10px
 }
 
 .skill-card:hover {
@@ -43,6 +45,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-top: 10px
 }
 
 .skill-badge {

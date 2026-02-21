@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import InkBlot from '../ui/InkBlot';
+// import InkBlot from '../ui/InkBlot';
 import './../../assets/styles/Hero.css';
 import profileImg from '../../assets/images/profile.jpg';
 const cornerFlourish = (rotation: number, top?: string, bottom?: string, left?: string, right?: string) => (
@@ -110,10 +110,6 @@ export default function Hero() {
                         filter: 'url(#inkBleed)',
                     }}
                 >
-                    import profileImg from '../../assets/images/profile.jpg';
-                    // ... (rest of imports)
-
-                    // ... inside the component
                     <div style={{
                         width: 'clamp(140px, 25vw, 200px)',
                         height: 'clamp(140px, 25vw, 200px)',
@@ -144,7 +140,7 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    <InkBlot rotation={45} scale={1.2} position={{ top: '80%', left: '80%' }} opacity={0.6} />
+                    {/* <InkBlot rotation={45} scale={1.2} position={{ top: '80%', left: '80%' }} opacity={0.3} /> */}
 
                     {/* Cute annotation */}
                     <motion.div
@@ -183,7 +179,7 @@ export default function Hero() {
                     >
                         Fidha Fathima M
                     </motion.h1>
-                    <InkBlot rotation={-20} scale={0.8} position={{ top: '50%', left: '-10%' }} opacity={0.3} />
+                    {/* <InkBlot rotation={-20} scale={0.8} position={{ top: '50%', left: '-10%' }} opacity={0.3} /> */}
                 </div>
 
                 {/* Ribbon subtitle */}

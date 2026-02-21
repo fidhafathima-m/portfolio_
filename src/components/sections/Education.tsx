@@ -4,7 +4,7 @@ import '../../assets/styles/Education.css'
 
 export default function Education() {
     return (
-        <section id="study" className="section education-section">
+        <section id="education" className="section education-section">
             <div className="deckle-edge" />
 
             <div className="ornament">

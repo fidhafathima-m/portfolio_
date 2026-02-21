@@ -77,7 +77,7 @@ export default function Footer() {
                         lineHeight: 1.6,
                     }}
                 >
-                    This folio was crafted with passion and code in the year MMXXVI
+                    This folio was crafted with passion and code in the year 2026
                 </motion.p>
 
                 <motion.p

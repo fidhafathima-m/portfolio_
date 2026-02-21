@@ -6,27 +6,22 @@ import '../../assets/styles/Skills.css'
 const skillGroups = [
     {
         title: 'Languages & Databases',
-        icon: '🔤',
         skills: ['JavaScript', 'TypeScript', 'C', 'MongoDB', 'MySQL', 'HTML', 'CSS'],
     },
     {
         title: 'Frontend & UI',
-        icon: '🎨',
         skills: ['React.js', 'Tailwind CSS', 'Redux'],
     },
     {
         title: 'Backend & Architecture',
-        icon: '⚙️',
         skills: ['Node.js', 'Express.js', 'RESTful APIs', 'MVC', 'Repository Pattern', 'SOLID Principles', 'Dependency Injection', 'Mongoose'],
     },
     {
         title: 'DevOps & Deployment',
-        icon: '☁️',
         skills: ['Git', 'GitHub Actions', 'AWS (EC2 & S3)', 'Nginx', 'PM2'],
     },
     {
         title: 'Tools & Design',
-        icon: '🛠',
         skills: ['Postman', 'VS Code', 'Figma', 'Eraser'],
     },
 ]
@@ -102,7 +97,6 @@ export default function Skills() {
                         whileHover={{ rotate: [-0.5, 0.5, -0.5], transition: { duration: 0.3, repeat: Infinity } }}
                     >
                         <div className="card-header">
-                            <span className="group-icon">{group.icon}</span>
                             <h3 className="group-title" style={{ filter: 'url(#inkBleed)' }}>{group.title}</h3>
                         </div>
                         <InkBlot rotation={index * 90} scale={0.6} position={{ top: '90%', left: '80%' }} opacity={0.1} />

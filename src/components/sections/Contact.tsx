@@ -104,7 +104,7 @@ export default function Contact() {
                             </div>
                             <div className="letter-detail-item">
                                 <span className="detail-icon">📍</span>
-                                <span>Malappuram, Kerala, India</span>
+                                <span>Kannur, Kerala, India</span>
                             </div>
                         </div>
 
