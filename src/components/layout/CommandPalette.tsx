@@ -14,6 +14,7 @@ const sectionTargets = [
   { id: 'skills', label: 'Go to Skills' },
   { id: 'projects', label: 'Go to Projects' },
   { id: 'education', label: 'Go to Education' },
+  { id: 'game', label: 'Go to Game' },
   { id: 'contact', label: 'Go to Contact' },
 ]
 
@@ -135,6 +136,7 @@ export default function CommandPalette() {
   }, [activeIndex, filteredActions, open])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveIndex(0)
   }, [query])
 

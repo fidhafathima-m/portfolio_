@@ -8,7 +8,8 @@ const chapters = [
     { id: 'skills', label: 'Skills', numeral: 'III' },
     { id: 'projects', label: 'Works', numeral: 'IV' },
     { id: 'education', label: 'Study', numeral: 'V' },
-    { id: 'contact', label: 'Letter', numeral: 'VI' },
+    { id: 'game', label: 'Game', numeral: 'VI' },
+    { id: 'contact', label: 'Letter', numeral: 'VII' },
 ];
 
 export default function Navigation() {

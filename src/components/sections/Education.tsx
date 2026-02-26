@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import InkBlot from '../ui/InkBlot'
+// import InkBlot from '../ui/InkBlot'
 import '../../assets/styles/Education.css'
 
 export default function Education() {
@@ -46,7 +46,7 @@ export default function Education() {
                 </div>
 
                 <div className="scroll-paper rough-edge ink-filter">
-                    <InkBlot rotation={-45} scale={1} position={{ top: '20%', left: '80%' }} opacity={0.15} />
+                    {/* <InkBlot rotation={-45} scale={1} position={{ top: '20%', left: '80%' }} opacity={0.15} /> */}
                     <div className="scroll-content">
                         <motion.div
                             className="diploma-body"
@@ -55,7 +55,7 @@ export default function Education() {
                             transition={{ delay: 0.8 }}
                         >
                             <div className="diploma-seal-container">
-                                <motion.div
+                                {/* <motion.div
                                     className="diploma-seal"
                                     initial={{ scale: 3, opacity: 0 }}
                                     whileInView={{ scale: 1, opacity: 1 }}
@@ -69,7 +69,7 @@ export default function Education() {
                                     >
                                         ✨
                                     </motion.div>
-                                </motion.div>
+                                </motion.div> */}
                             </div>
                             <h3 className="diploma-degree" style={{ filter: 'url(#inkBleed)' }}>Bachelor of Computer Applications</h3>
                             <p className="diploma-details">
@@ -95,7 +95,6 @@ export default function Education() {
             >
                 <h4 className="cert-title" style={{ filter: 'url(#inkBleed)' }}>Certifications & Training</h4>
                 <div className="cert-item ink-filter">
-                    <span className="cert-seal">📜</span>
                     <div className="cert-info">
                         <strong>MERN Stack Development</strong>
                         <p>Brototype — Intensive Training</p>

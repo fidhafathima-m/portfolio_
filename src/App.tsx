@@ -11,6 +11,7 @@ import Footer from './components/layout/Footer'
 import QuillCursor from './components/ui/QuillCursor'
 import Marginalia from './components/layout/Marginalia'
 import SVGFilters from './components/ui/SVGFilters'
+import Game from './components/sections/Game'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -38,6 +39,7 @@ function App() {
             <Skills />
             <Projects />
             <Education />
+            <Game/>
             <Contact />
           </main>
           <Footer />
