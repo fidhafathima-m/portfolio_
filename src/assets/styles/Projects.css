@@ -175,3 +175,408 @@
         padding: 1.5rem;
     }
 }
+
+/* ═══════════════════════════════════════════
+   ARCHIVE SECTION — add to your Projects.css
+   ═══════════════════════════════════════════ */
+
+/* ── Divider ── */
+.archive-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem auto 2.5rem;
+    max-width: 600px;
+    padding: 0 2rem;
+}
+
+.archive-divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ink, #2c1810), transparent);
+    opacity: 0.3;
+}
+
+.archive-divider-glyph {
+    font-family: serif;
+    color: var(--ink, #2c1810);
+    opacity: 0.45;
+    font-size: 0.85rem;
+    letter-spacing: 0.4em;
+    white-space: nowrap;
+}
+
+/* ── Trigger Button ── */
+.archive-trigger-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.archive-prelude {
+    font-family: var(--font-body, 'Palatino Linotype', Georgia, serif);
+    font-style: italic;
+    color: var(--ink, #2c1810);
+    opacity: 0.6;
+    font-size: 0.9rem;
+    max-width: 460px;
+    line-height: 1.7;
+}
+
+.archive-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 2rem;
+    background: transparent;
+    border: 1.5px solid var(--ink, #2c1810);
+    color: var(--ink, #2c1810);
+    font-family: var(--font-display, 'Cinzel', Georgia, serif);
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+.archive-trigger::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--ink, #2c1810);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+}
+
+.archive-trigger:hover::before,
+.archive-trigger.is-open::before {
+    transform: scaleX(1);
+}
+
+.archive-trigger:hover,
+.archive-trigger.is-open {
+    color: var(--parchment, #f5e6c8);
+}
+
+.archive-trigger > * {
+    position: relative;
+    z-index: 1;
+}
+
+.archive-trigger-seal {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.archive-trigger:hover .archive-trigger-seal {
+    transform: rotate(15deg);
+}
+
+.archive-trigger-arrow {
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+/* ── Archive Panel ── */
+.archive-panel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.archive-panel-inner {
+    padding: 2.5rem 1.5rem 3rem;
+    border-top: 1px dashed rgba(44, 24, 16, 0.2);
+    margin-top: 1rem;
+}
+
+.archive-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.archive-title {
+    font-family: var(--font-display, 'Cinzel', Georgia, serif);
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    color: var(--ink, #2c1810);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0 0 0.5rem;
+}
+
+.archive-subtitle {
+    font-family: var(--font-body, 'Palatino Linotype', Georgia, serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--ink, #2c1810);
+    opacity: 0.55;
+    margin: 0;
+    letter-spacing: 0.06em;
+}
+
+/* ── Archive Grid ── */
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ── Archive Scroll Card ── */
+.archive-scroll {
+    position: relative;
+    background: var(--parchment-light, #fdf6e8);
+    border: 1px solid rgba(44, 24, 16, 0.15);
+    padding: 1.4rem 1.2rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* faint paper texture shadow */
+    box-shadow:
+        inset 0 0 30px rgba(44, 24, 16, 0.03),
+        2px 3px 12px rgba(44, 24, 16, 0.08);
+}
+
+.archive-scroll::after {
+    /* torn-bottom effect */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--parchment-light, #fdf6e8) 0px,
+        var(--parchment-light, #fdf6e8) 4px,
+        transparent 4px,
+        transparent 8px
+    );
+}
+
+.archive-scroll:hover {
+    transform: translateY(-4px) rotate(0.3deg);
+    box-shadow:
+        inset 0 0 30px rgba(44, 24, 16, 0.04),
+        4px 8px 24px rgba(44, 24, 16, 0.14);
+}
+
+/* Wax seal (language badge) */
+.scroll-wax-seal {
+    position: absolute;
+    top: -10px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display, 'Cinzel', Georgia, serif);
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-body {
+    flex: 1;
+}
+
+.scroll-folio-num {
+    font-family: var(--font-display, 'Cinzel', Georgia, serif);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--ink, #2c1810);
+    opacity: 0.35;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.scroll-title {
+    font-family: var(--font-display, 'Cinzel', Georgia, serif);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    color: var(--ink, #2c1810);
+    margin: 0 0 0.5rem;
+    text-transform: capitalize;
+    line-height: 1.3;
+}
+
+.scroll-desc {
+    font-family: var(--font-body, 'Palatino Linotype', Georgia, serif);
+    font-size: 0.78rem;
+    color: var(--ink, #2c1810);
+    opacity: 0.65;
+    line-height: 1.6;
+    margin: 0;
+    /* clamp to 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.scroll-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.scroll-lang {
+    font-family: var(--font-display, 'Cinzel', Georgia, serif);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    padding: 0.15rem 0.45rem;
+    opacity: 0.75;
+}
+
+.scroll-stars {
+    font-size: 0.7rem;
+    color: var(--ink, #2c1810);
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+}
+
+/* Link at card bottom */
+.scroll-link {
+    position: absolute;
+    bottom: 0.9rem;
+    left: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-display, 'Cinzel', Georgia, serif);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink, #2c1810);
+    text-decoration: none;
+    opacity: 0.45;
+    transition: opacity 0.2s ease, letter-spacing 0.2s ease;
+}
+
+.archive-scroll:hover .scroll-link {
+    opacity: 0.85;
+    letter-spacing: 0.18em;
+}
+
+.scroll-link-icon {
+    font-size: 0.75rem;
+}
+
+/* Decorative ribbon strip on left edge */
+.scroll-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(44, 24, 16, 0.12), rgba(44, 24, 16, 0.04));
+}
+
+/* ── Loading State ── */
+.archive-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+    opacity: 0.55;
+    color: var(--ink, #2c1810);
+}
+
+.loading-quill {
+    font-size: 2rem;
+    animation: quillBob 1.4s ease-in-out infinite;
+}
+
+@keyframes quillBob {
+    0%, 100% { transform: translateY(0) rotate(-10deg); }
+    50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+.archive-loading p {
+    font-family: var(--font-body, 'Palatino Linotype', Georgia, serif);
+    font-style: italic;
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+
+/* ── Error State ── */
+.archive-error {
+    text-align: center;
+    padding: 2rem;
+    color: #8b2020;
+    font-family: var(--font-body, 'Palatino Linotype', Georgia, serif);
+    font-style: italic;
+    font-size: 0.88rem;
+    opacity: 0.75;
+}
+
+/* ── Empty State ── */
+.archive-empty {
+    text-align: center;
+    font-family: var(--font-body, 'Palatino Linotype', Georgia, serif);
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--ink, #2c1810);
+    opacity: 0.5;
+    padding: 2rem;
+}
+
+/* ── Footer Link ── */
+.archive-footer {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.archive-github-link {
+    font-family: var(--font-display, 'Cinzel', Georgia, serif);
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink, #2c1810);
+    text-decoration: none;
+    opacity: 0.45;
+    border-bottom: 1px dashed rgba(44, 24, 16, 0.3);
+    padding-bottom: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.archive-github-link:hover {
+    opacity: 0.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    .archive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-trigger {
+        font-size: 0.72rem;
+        padding: 0.65rem 1.5rem;
+    }
+}
