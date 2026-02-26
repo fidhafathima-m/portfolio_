@@ -384,8 +384,7 @@ export default function Game() {
   const [doodles, setDoodles] = useState<Doodle[]>([]);
   const [bubbles, setBubbles] = useState<Bubble[]>([]);
   const [pokeCount, setPokeCount] = useState(0);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [nextDoodleId, setNextDoodleId] = useState(0);
+  const [, setNextDoodleId] = useState(0);
   const [hint, setHint] = useState(true);
 
   const sleepTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
